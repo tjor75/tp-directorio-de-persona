@@ -1,11 +1,22 @@
 import { NavLink } from "react-router-dom";
+import { HiHome, HiTrendingUp, HiUserAdd } from "react-icons/hi";
+import "./Navbar.css";
 
 function Navbar() {
     return (
         <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/estadisticas">Estadisticas</NavLink>
-            <NavLink to="/contacto">Contacto</NavLink>
+            <NavLink to="/">
+                <HiHome />
+                <span>Home</span>
+            </NavLink>
+            <NavLink to="/estadisticas">
+                <HiTrendingUp />
+                <span>Estadisticas</span>
+            </NavLink>
+            <NavLink to="/contacto">
+                <HiUserAdd />
+                <span>Contacto</span>
+            </NavLink>
         </nav>
     );
 }
