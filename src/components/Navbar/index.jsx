@@ -7,11 +7,11 @@ function Navbar() {
         <nav>
             <NavLink to="/">
                 <HiHome />
-                <span>Home</span>
+                <span>Inicio</span>
             </NavLink>
             <NavLink to="/estadisticas">
                 <HiTrendingUp />
-                <span>Estadisticas</span>
+                <span>Estad&iacute;sticas</span>
             </NavLink>
             <NavLink to="/contacto">
                 <HiUserAdd />
