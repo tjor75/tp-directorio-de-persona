@@ -1,0 +1,45 @@
+body {
+    --primary-color: #E1B38E;
+    --secondary-color: #8AA89F;
+    --tertiary-color: #220C10;
+    font-family: Helvetica, sans-serif;
+    color: #220C10;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+button, nav a {
+    color: #220C10;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 12px;
+}
+button:hover, nav a:hover {
+    box-shadow: 0 5px 5px #E1B38E;
+}
+button:hover, nav .active {
+    color: #FFF;
+    background: #E1B38E;
+}
+
+button {
+    width: 100%;
+    border: solid 1px var(--primary-color);
+    cursor: pointer;
+}
+button.primary, button.primary-outline:hover {
+    color: #FFF;
+    background: var(--primary-color);
+}
+button.primary-outline, button.primary:hover {
+    color: var(--primary-color);
+    background: #FFF;
+}
+
+.box {
+
+}
