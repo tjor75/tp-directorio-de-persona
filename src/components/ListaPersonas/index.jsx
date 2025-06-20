@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Persona from "../UI/Persona";
+import PersonaCard from "../UI/PersonaCard";
 import "./ListaPersonas.css";
 
 const CANT_AGREGAR = 12;
@@ -17,7 +17,7 @@ function ListaPersonas({ personas }) {
         <div className="lista-personas">
             <div>
                 {personas.slice(0, cantPersonas).map(persona => (
-                    <Persona key={"persona" + persona.id} persona={persona} />
+                    <PersonaCard key={"persona" + persona.id} persona={persona} />
                 ))}
             </div>
             {cantPersonas !== totalPersonas && <button className="primary-outline" onClick={verMas}>Ver m&aacute;s</button>}

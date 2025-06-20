@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Persona.css";
+import "./PersonaCard.css";
 
-function Persona({ persona }) {
+function PersonaCard({ persona }) {
     return (
         <Link to={"/persona/" + persona.id}>
             <div className="persona">
@@ -12,4 +12,4 @@ function Persona({ persona }) {
     )
 }
 
-export default Persona;
+export default PersonaCard;
