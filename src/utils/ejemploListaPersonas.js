@@ -1,4 +1,4 @@
-const listaPersonas = [
+const ejemploListaPersonas = [
     { id: 1, nombre: "Ana", apellido: "Pérez", edad: 28, email: "ana.perez@example.com" },
     { id: 2, nombre: "Luis", apellido: "Gómez", edad: 35, email: "luis.gomez@example.com" },
     { id: 3, nombre: "María", apellido: "López", edad: 22, email: "maria.lopez@example.com" },
@@ -21,4 +21,4 @@ const listaPersonas = [
     { id: 20, nombre: "Gabriel", apellido: "Jiménez", edad: 31, email: "gabriel.jimenez@example.com" }
 ];
 
-export default listaPersonas;
+export default ejemploListaPersonas;

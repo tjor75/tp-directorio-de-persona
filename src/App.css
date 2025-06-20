@@ -32,15 +32,27 @@ button {
     border: solid 1px var(--primary-color);
     cursor: pointer;
 }
-button.primary, button.primary-outline:hover {
+.primary, button.primary-outline:hover {
     color: #FFF;
     background: var(--primary-color);
+    border: solid 1px var(--primary-color);
 }
-button.primary-outline, button.primary:hover {
+.primary-outline, button.primary:hover {
     color: var(--primary-color);
     background: #FFF;
+    border: solid 1px var(--primary-color);
+}
+.secondary, button.secondary-outline:hover {
+    color: #FFF;
+    background: var(--secondary-color);
+    border: solid 1px var(--secondary-color);
+}
+.secondary-outline, button.secondary:hover {
+    color: var(--secondary-color);
+    background: #FFF;
+    border: solid 1px var(--secondary-color);
 }
 
-.box {
-
+.card {
+    border-radius: 12px;
 }

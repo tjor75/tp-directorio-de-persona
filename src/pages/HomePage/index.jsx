@@ -1,9 +1,12 @@
-import listaPersonas from "../../utils/listaPersonas";
+import { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
 import ListaPersonas from "../../components/ListaPersonas";
 
 function HomePage() {
+    const { personas } = useContext(GlobalContext);
+
     return (
-        <ListaPersonas personas={listaPersonas} />
+        <ListaPersonas personas={personas} />
     )
 }
 
