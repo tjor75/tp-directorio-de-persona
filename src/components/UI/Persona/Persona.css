@@ -1,6 +1,4 @@
 .persona {
-    color: var(--secondary-color);
-    text-decoration: none;
     border: solid 1px var(--secondary-color);
     border-radius: 12px;
 }
