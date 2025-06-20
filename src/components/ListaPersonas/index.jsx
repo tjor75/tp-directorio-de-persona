@@ -5,23 +5,22 @@ import "./ListaPersonas.css";
 const CANT_AGREGAR = 12;
 
 function ListaPersonas({ personas }) {
-    const [cantMostrar, setCantMostrar] = useState(CANT_AGREGAR);
-    let i = -1;
+    const [cantPersonas, setCantPersonas] = useState(CANT_AGREGAR);
+    const totalPersonas = personas.length;
 
     const verMas = () => {
-        let nuevaCantMostrar = cantMostrar + CANT_AGREGAR;
-        setCantMostrar(nuevaCantMostrar <= personas.length ? nuevaCantMostrar : personas.length);
+        let nuevaCantPersonas = cantPersonas + CANT_AGREGAR;
+        setCantPersonas(nuevaCantPersonas <= totalPersonas ? nuevaCantPersonas : totalPersonas);
     };
 
     return (
         <div className="lista-personas">
             <div>
-                {personas.slice(0, cantMostrar).map(persona => {
-                    i++;
-                    return <Persona key={"persona" + i} persona={persona} />
-                })}
+                {personas.slice(0, cantPersonas).map(persona => (
+                    <Persona key={"persona" + persona.id} persona={persona} />
+                ))}
             </div>
-            <button className="primary-outline" onClick={verMas}>Ver m&aacute;s</button>
+            {cantPersonas !== totalPersonas && <button className="primary-outline" onClick={verMas}>Ver m&aacute;s</button>}
         </div>
     )
 }
