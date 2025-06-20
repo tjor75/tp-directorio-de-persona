@@ -1,12 +1,33 @@
 nav {
     display: flex;
-    gap: 8px;
     align-items: center;
-    width: fit-content;
-    height: 100%;
+    gap: 8px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: #FFF;
     margin: 3px auto;
     padding: 8px 10px;
     border: solid 1px #E1B38E;
     border-radius: 12px;
     box-shadow: 0 7px 8px #E1B38E;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        gap: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+    }
+    nav a {
+        width: 100%;
+        border-radius: 0;
+    }
+    nav span {
+        display: none;
+    }
 }

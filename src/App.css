@@ -4,6 +4,7 @@ body {
     --tertiary-color: #220C10;
     font-family: Helvetica, sans-serif;
     color: #220C10;
+    margin: 0;
 }
 
 a {
