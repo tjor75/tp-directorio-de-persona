@@ -1,58 +1,63 @@
 body {
     --primary-color: #E1B38E;
     --secondary-color: #8AA89F;
-    --tertiary-color: #220C10;
+    --text-color: #220C10;
     font-family: Helvetica, sans-serif;
-    color: #220C10;
+    color: var(--text-color);
     margin: 0;
 }
 
 a {
-    color: var(--secondary-color);
+    color: var(--text-color);
     text-decoration: none;
 }
-button, nav a {
-    color: #220C10;
-    font-size: 20px;
-    font-weight: 600;
+button, nav a, .card {
     padding: 8px 10px;
-    text-decoration: none;
     border-radius: 12px;
 }
-button:hover, nav a:hover {
-    box-shadow: 0 5px 5px #E1B38E;
+button, nav a {
+    color: var(--text-color);
+    font-size: 20px;
 }
-button:hover, nav .active {
-    color: #FFF;
-    background: #E1B38E;
-}
-
 button {
     width: 100%;
     border: solid 1px var(--primary-color);
     cursor: pointer;
 }
-.primary, button.primary-outline:hover {
+
+button:hover, nav a:hover {
+    box-shadow: 0 5px 5px var(--primary-color);
+}
+button:hover, nav .active {
+    color: #FFF;
+    background: var(--primary-color);
+}
+
+.primary,
+button.primary-outline:hover,
+a.card.primary-outline:hover {
     color: #FFF;
     background: var(--primary-color);
     border: solid 1px var(--primary-color);
 }
-.primary-outline, button.primary:hover {
+.primary-outline,
+button.primary:hover,
+a.card.primary:hover {
     color: var(--primary-color);
     background: #FFF;
     border: solid 1px var(--primary-color);
 }
-.secondary, button.secondary-outline:hover {
+.secondary,
+button.secondary-outline:hover,
+a.card.secondary-outline:hover {
     color: #FFF;
     background: var(--secondary-color);
     border: solid 1px var(--secondary-color);
 }
-.secondary-outline, button.secondary:hover {
+.secondary-outline,
+button.secondary:hover,
+a.card.secondary:hover {
     color: var(--secondary-color);
     background: #FFF;
     border: solid 1px var(--secondary-color);
-}
-
-.card {
-    border-radius: 12px;
 }

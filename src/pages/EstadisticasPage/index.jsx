@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import NumeroCard from "../../components/UI/NumeroCard";
+import "./EstadisticasPage.css";
 
 function obtenerMayoresDe(personas, edadMinima) {
     return personas.filter((persona) => {
@@ -22,7 +23,7 @@ function EstadisticasPage() {
         <>
             <h1>Estad&iacute;sticas</h1>
             <div>
-                <NumeroCard numero={totalPersonas} texto="Personas" />
+                <NumeroCard className="primary" numero={totalPersonas} texto="Personas" />
                 <NumeroCard numero={mayores35} texto="Personas mayores de 35" />
                 <NumeroCard className="secondary-outline" numero={mayoresEdad} texto="Personas mayores de edad" />
                 <NumeroCard className="secondary-outline" numero={menoresEdad} texto="Personas menores de edad" />
