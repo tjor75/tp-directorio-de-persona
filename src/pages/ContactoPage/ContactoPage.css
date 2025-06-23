@@ -1,18 +1,4 @@
 /* ContactoPage.css */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    color: var(--tertiary-color);
-    margin-bottom: 20px;
-}
 
 form {
     display: flex;
@@ -30,16 +16,13 @@ input {
     border: 1px solid var(--primary-color);
     border-radius: 8px;
     font-size: 16px;
+    width: 100%;
 }
 
 input:focus {
     outline: none;
     border-color: var(--secondary-color);
     box-shadow: 0 0 5px var(--secondary-color);
-}
-
-button {
-    margin-top: 10px;
 }
 
 .error-message {
