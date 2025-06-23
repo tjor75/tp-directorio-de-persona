@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
 import "./ContactoPage.css";
 
 function ContactoPage() {
+    const { personas, setPersonas } = useContext(GlobalContext);
+
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
@@ -14,7 +17,7 @@ function ContactoPage() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setPersonas([...personas]); // en proceso
     };
 
     const validate = () => {
@@ -96,7 +99,7 @@ function ContactoPage() {
                     />
                     {errors.edad && <p style={{ color: 'red' }}>{errors.edad}</p>}
                 </div>
-                <button type="submit">Enviar</button>
+                <button className="primary-outline" type="submit">Enviar</button>
             </form>
             {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
         </div>
