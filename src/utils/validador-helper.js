@@ -17,9 +17,6 @@ const getStringOrDefault = (value, defaultValue) => {
     return typeof value === 'string' ? value : defaultValue;
 };
 const getBooleanOrDefault = (value, defaultValue) => {
-    return typeof value === 'boolean' ? value : defaultValue;
-};
-const getBooleanStringOrDefault = (value, defaultValue) => {
     const isTrue    = value.toLowerCase() === 'true'  || Number(value) === 1;
     const isFalse   = value.toLowerCase() === 'false' || Number(value) === 0;
     return isTrue || isFalse ? isTrue : defaultValue;
