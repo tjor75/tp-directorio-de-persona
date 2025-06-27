@@ -15,11 +15,9 @@ function ListaPersonas({ personas }) {
 
     return (
         <div className="lista-personas">
-            <div>
-                {personas.slice(0, cantPersonas).map(persona => (
-                    <PersonaCard key={"persona" + persona.id} persona={persona} />
-                ))}
-            </div>
+            {personas.slice(0, cantPersonas).map(persona => (
+                <PersonaCard key={"persona" + persona.id} persona={persona} />
+            ))}
             {cantPersonas !== totalPersonas && <button className="primary-outline" onClick={verMas}>Ver m&aacute;s</button>}
         </div>
     )

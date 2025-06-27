@@ -1,16 +1,21 @@
-.lista-personas > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.lista-personas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 10px;
 }
+.lista-personas a {
+    width: 32.33%;
+    box-sizing: border-box;
+}
 
-@media only screen and (max-width: 768px) {
-    .lista-personas > div {
-        grid-template-columns: repeat(2, 1fr);
+/*@media only screen and (max-width: 768px) {
+    .lista-personas a {
+        49%;
     }
 }
 @media only screen and (max-width: 600px) {
-    .lista-personas > div {
-        grid-template-columns: repeat(1, 1fr);
+    .lista-personas {
+        100%;
     }
-}
+} */
