@@ -40,7 +40,11 @@ function ContactoPage() {
             newErrors.edad = 'Introduzca un número desde 0';
         
         return newErrors;
-    };
+    }
+
+    function ordenarPorNombre(lista) {
+        return lista.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    }
 
     function handleNombre(e) {
         setNombre(e.target.value);
@@ -52,7 +56,6 @@ function ContactoPage() {
         setEmail(e.target.value);
     }
     function handleEdad(e) {
-        'La edad es obligatoria.';
         setEdad(e.target.value);
     }
 
@@ -67,7 +70,7 @@ function ContactoPage() {
             setExito(false);
         } else {
             setExito(true);
-            setPersonas([...personas, formFormateado]);
+            setPersonas(ordenarPorNombre([...personas, formFormateado]));
             setNombre("");
             setApellido("");
             setEmail("");
