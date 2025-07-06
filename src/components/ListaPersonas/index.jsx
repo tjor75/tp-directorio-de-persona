@@ -8,6 +8,8 @@ function ListaPersonas({ personas }) {
     const [cantPersonas, setCantPersonas] = useState(CANT_AGREGAR);
     const totalPersonas = personas.length;
 
+    const ordenarPorNombre = (lista) => lista.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
     const verMas = () => {
         let nuevaCantPersonas = cantPersonas + CANT_AGREGAR;
         setCantPersonas(nuevaCantPersonas <= totalPersonas ? nuevaCantPersonas : totalPersonas);
@@ -15,7 +17,7 @@ function ListaPersonas({ personas }) {
 
     return (
         <div className="lista-personas">
-            {personas.slice(0, cantPersonas).map(persona => (
+            {ordenarPorNombre(personas).slice(0, cantPersonas).map(persona => (
                 <PersonaCard key={"persona" + persona.id} persona={persona} />
             ))}
             {cantPersonas !== totalPersonas && <button className="primary-outline" onClick={verMas}>Ver m&aacute;s</button>}

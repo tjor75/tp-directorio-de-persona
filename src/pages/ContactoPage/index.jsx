@@ -42,10 +42,6 @@ function ContactoPage() {
         return newErrors;
     }
 
-    function ordenarPorNombre(lista) {
-        return lista.sort((a, b) => a.nombre.localeCompare(b.nombre));
-    }
-
     function handleNombre(e) {
         setNombre(e.target.value);
     }
@@ -70,7 +66,7 @@ function ContactoPage() {
             setExito(false);
         } else {
             setExito(true);
-            setPersonas(ordenarPorNombre([...personas, formFormateado]));
+            setPersonas([...personas, formFormateado]);
             setNombre("");
             setApellido("");
             setEmail("");
