@@ -3,20 +3,25 @@ form {
     flex-direction: column;
     gap: 10px;
 }
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+form p {
+    margin: 0;
+}
 
 label {
     font-weight: bold;
     color: var(--tertiary-color);
 }
-
 input {
     padding: 10px;
     border: 1px solid var(--primary-color);
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
-    width: 100%;
 }
-
 input:focus {
     outline: none;
     border-color: var(--secondary-color);
@@ -25,13 +30,7 @@ input:focus {
 
 .error-message {
     color: red;
-    font-size: 14px;
-    margin-top: 5px;
 }
-
 .success-message {
     color: green;
-    font-size: 16px;
-    text-align: center;
-    margin-top: 15px;
 }
