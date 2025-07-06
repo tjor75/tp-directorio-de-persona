@@ -11,15 +11,13 @@ a {
     color: var(--text-color);
     text-decoration: none;
 }
-button, nav a, .card {
+button, .card {
     padding: 8px 10px;
     border-radius: 12px;
 }
-button, nav a {
+button {
     color: var(--text-color);
     font-size: 20px;
-}
-button {
     width: 100%;
     border: solid 1px var(--primary-color);
     cursor: pointer;

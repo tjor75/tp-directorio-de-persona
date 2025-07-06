@@ -76,33 +76,33 @@ function ContactoPage() {
     };
 
     return (
-        <div>
+        <>
             <h1>Contacto</h1>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Nombre:</label>
+                    <label>Nombre</label>
                     <input type="text" name="nombre" value={nombre} onChange={handleNombre} />
                     {errors.nombre && <p style={{ color: 'red' }}>{errors.nombre}</p>}
                 </div>
                 <div>
-                    <label>Apellido:</label>
+                    <label>Apellido</label>
                     <input type="text" name="apellido" value={apellido} onChange={handleApellido} />
                     {errors.apellido && <p style={{ color: 'red' }}>{errors.apellido}</p>}
                 </div>
                 <div>
-                    <label>Email:</label>
+                    <label>Email</label>
                     <input type="email" name="email" value={email} onChange={handleEmail} />
                     {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
                 </div>
                 <div>
-                    <label>Edad:</label>
+                    <label>Edad</label>
                     <input type="number" name="edad" value={edad} onChange={handleEdad} />
                     {errors.edad && <p style={{ color: 'red' }}>{errors.edad}</p>}
                 </div>
                 <button className="primary-outline" type="submit">Enviar</button>
             </form>
             {exito && <p style={{ color: "green" }}>A&ntilde;adido</p>}
-        </div>
+        </>
     );
 }
 

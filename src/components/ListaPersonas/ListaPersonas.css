@@ -9,13 +9,13 @@
     box-sizing: border-box;
 }
 
-/*@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .lista-personas a {
-        49%;
+        width: 49%;
     }
 }
 @media only screen and (max-width: 600px) {
-    .lista-personas {
-        100%;
+    .lista-personas a {
+        width: 100%;
     }
-} */
+}
