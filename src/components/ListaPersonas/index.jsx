@@ -17,10 +17,16 @@ function ListaPersonas({ personas }) {
 
     return (
         <div className="lista-personas">
-            {ordenarPorNombre(personas).slice(0, cantPersonas).map(persona => (
-                <PersonaCard key={"persona" + persona.id} persona={persona} />
-            ))}
-            {cantPersonas !== totalPersonas && <button className="primary-outline" onClick={verMas}>Ver m&aacute;s</button>}
+            {personas.length !== 0 ?
+                <>
+                    {ordenarPorNombre(personas).slice(0, cantPersonas).map(persona => (
+                        <PersonaCard key={"persona" + persona.id} persona={persona} />
+                    ))}
+                    {cantPersonas < totalPersonas && <button className="primary-outline" onClick={verMas}>Ver m&aacute;s</button>}
+                </>
+                :
+                <p className="no-personas">No hay personas para mostrar</p>
+            }
         </div>
     )
 }

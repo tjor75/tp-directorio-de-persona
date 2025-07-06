@@ -13,8 +13,13 @@ function ContactoPage() {
     const [errors, setErrors] = useState({});
     const [exito, setExito] = useState(false);
 
+    function obtenerNuevoId(lista) {
+        return lista.length > 0 ? lista[lista.length - 1].id + 1 : 1;
+    }
+
     function obtenerFormFormateado() {
         return {
+            id: obtenerNuevoId(personas),
             nombre: nombre.trim(),
             apellido: apellido.trim(),
             email: email.trim(),
@@ -22,7 +27,7 @@ function ContactoPage() {
         }
     }
 
-    function validar(formData) {
+    function validarFormFormateado(formData) {
         const newErrors = {};
         if (!formData.nombre)
             newErrors.nombre = 'El nombre es obligatorio';
@@ -59,7 +64,7 @@ function ContactoPage() {
         e.preventDefault();
 
         const formFormateado = obtenerFormFormateado();
-        const errores = validar(formFormateado);
+        const errores = validarFormFormateado(formFormateado);
         setErrors(errores);
 
         if (Object.keys(errores).length > 0) {
